@@ -6,6 +6,7 @@ import { createStore, combineReducers } from 'redux';
 
 import Box from './Box';
 import BoxInline from './BoxInline';
+import BoxStyled from './BoxStyled';
 import Reducer from '../Store/Reducer';
 
 /*
@@ -17,6 +18,6 @@ This is our application client. We set this as the Webpack Entry point, which ma
 */
 
 const AppStore = createStore(Reducer.combine(combineReducers), window.app);
-const App = <Provider store={AppStore}><BoxInline /></Provider>;
+const App = <Provider store={AppStore}><BoxStyled /></Provider>;
 
 ReactDOM.render(App, document.getElementById('app-mount'));
