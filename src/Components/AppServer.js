@@ -6,6 +6,7 @@ import { createStore, combineReducers } from 'redux';
 
 import Page from '../Components/Page';
 import Box from '../Components/Box';
+import BoxInline from '../Components/BoxInline';
 import Reducer from '../Store/Reducer';
 
 /*
@@ -26,7 +27,7 @@ class AppServer{
     }
 
     getPageProperties(){
-        const App = <Provider store={this.AppStore}><Box /></Provider>;
+        const App = <Provider store={this.AppStore}><BoxInline /></Provider>;
 
         return {
             title: "Isomorphic Starter - Example",
